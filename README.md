@@ -48,6 +48,6 @@ CREATE TABLE EventsSpace.message (
 
 ### Thrift types selection for message (logging event)
 
-For m (the logging message), string type is selected as a natutal choice.
+For m (the logging message), string type is selected as a natural choice.
 
-For time i64 is selected as the most appropriate type for timestamp.
+For time type i64 is selected as the most appropriate type for timestamp.
