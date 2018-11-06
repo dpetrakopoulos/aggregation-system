@@ -22,9 +22,9 @@ through maven dependency to the other modules.
 ### Running kafka
 Download kafka distribution from kafka website.
 Execute following commands:
-bin/zookeeper-server-start.sh config/zookeeper.properties
-bin/kafka-server-start.sh config/server.properties
-bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic events
+- bin/zookeeper-server-start.sh config/zookeeper.properties
+- bin/kafka-server-start.sh config/server.properties
+- bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic events
 
 ### Cassandra (keyspace and table creation)
 After downloading and installing Cassandra run the following in CQL shell:
@@ -43,8 +43,8 @@ CREATE TABLE EventsSpace.message (
   PRIMARY KEY (id, date)
 ) with CLUSTERING ORDER BY (date DESC);
 
-The table has a compound primary key consisting of id and date columns.
-Column date is the clustering key and is used to sort results by date descending.
+- The table has a compound primary key consisting of id and date columns.
+- Column date is the clustering key and is used to sort results by date descending.
 
 ### Thrift types selection for message (logging event)
 
