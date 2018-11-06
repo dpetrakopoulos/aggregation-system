@@ -34,11 +34,11 @@ public class ThriftMessageSenderServiceImpl implements ThriftMessageSenderServic
     }
 
     private ThriftMessage generateRandomMessage() {
-        final ThriftMessage result = new ThriftMessage();
-        result.setV(thriftVersion);
-        result.setTime(Calendar.getInstance().getTimeInMillis());
-        result.setM(UUID.randomUUID().toString());
-        return result;
+        final ThriftMessage generatedMessage = new ThriftMessage();
+        generatedMessage.setV(thriftVersion);
+        generatedMessage.setTime(Calendar.getInstance().getTimeInMillis());
+        generatedMessage.setM(UUID.randomUUID().toString());
+        return generatedMessage;
     }
 
 }

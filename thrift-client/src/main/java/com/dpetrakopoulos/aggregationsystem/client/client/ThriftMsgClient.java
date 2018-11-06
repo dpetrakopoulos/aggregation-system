@@ -13,6 +13,9 @@ import org.springframework.stereotype.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Sends a thrift message to the remote thrift server
+ */
 @Component
 public class ThriftMsgClient {
 
@@ -33,11 +36,9 @@ public class ThriftMsgClient {
         TProtocol protocol = new TBinaryProtocol(transport);
         MessageService.Client client = new MessageService.Client(protocol);
 
-        logger.info("Going to save random message");
+        logger.info("Going to send message {} to thrift server", thriftMessage);
 
         client.save(thriftMessage);
-
-        logger.debug("Random message saved");
 
         transport.close();
 
